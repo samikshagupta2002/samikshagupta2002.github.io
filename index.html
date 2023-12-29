@@ -141,7 +141,8 @@
 						<div class="col-sm-offset-1 col-sm-5">
 							<div class="single-about-img">
 								<img src="assets/images/about/profile_image.jpg" alt="profile_image">
-								
+								<div class="about-list-icon">
+								</div><!-- /.about-list-icon -->
 							</div>
 						</div>
 					</div>
@@ -363,9 +364,9 @@
 												<div class="experience-time">
 													<h2>
 														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2016 - 2018
+														
 													</h2>
-													<h3>associate design director</h3>
+													<h3></h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 										</div>
@@ -377,8 +378,8 @@
 										<div class="row">
 											<div class="col-md-5">
 												<div class="experience-time text-right">
-													<h2>2013 - 2016</h2>
-													<h3>senior UI/UX designer</h3>
+													<h2></h2>
+													<h3></h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 											<div class="col-md-offset-1 col-md-5">
@@ -386,11 +387,11 @@
 													<div class="timeline-content">
 														<h4 class="title">
 															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															hoplony tech limited
+															
 														</h4>
-														<h5>newyork, USA</h5>
+														<h5>          </h5>
 														<p class="description">
-															Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
+															 
 														</p>
 													</div><!--/.timeline-content-->
 												</div><!--/.timeline-->
@@ -406,7 +407,7 @@
 												<div class="experience-time">
 													<h2>
 														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2012 - 2013
+													
 													</h2>
 													<h3>UI/UX designer</h3>
 												</div><!--/.experience-time-->
@@ -415,11 +416,9 @@
 												<div class="timeline">
 													<div class="timeline-content text-right">
 														<h4 class="title">
-															hoplony tech limited
 														</h4>
-														<h5>newyork, USA</h5>
+														<h5></h5>
 														<p class="description">
-															Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
 														</p>
 													</div><!--/.timeline-content-->
 												</div><!--/.timeline-->
@@ -427,10 +426,10 @@
 											<div class="col-md-offset-1 col-md-5 experience-time-main">
 												<div class="experience-time">
 													<h2>
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2012 - 2013
+														<!--?.<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+														
 													</h2>
-													<h3>UI/UX designer</h3>
+													<h3></h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 										</div>
@@ -442,8 +441,8 @@
 										<div class="row">
 											<div class="col-md-5">
 												<div class="experience-time text-right">
-													<h2>2010 - 2012</h2>
-													<h3>frontend developer</h3>
+													<h2></h2>
+													<h3></h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 											<div class="col-md-offset-1 col-md-5">
@@ -451,9 +450,9 @@
 													<div class="timeline-content">
 														<h4 class="title">
 															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															hoplony tech limited
+															
 														</h4>
-														<h5>newyork, USA</h5>
+														<h5></h5>
 														<p class="description">
 														</p>
 													</div><!--/.timeline-content-->
@@ -597,7 +596,7 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form>
+									<form onsubmit="sendEmail(); reset(); return false;"> 
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
@@ -642,7 +641,7 @@
 
 		</section><!--/.contact-->
 		<!--contact end -->
-
+		
 		<!--footer-copyright start-->
 		<footer id="footer-copyright" class="footer-copyright">
 			<div class="container">
@@ -665,6 +664,26 @@
 		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
+		<script src="http://smtpjs.com/v3/smtp.js"></script>
+		<script>
+			function sendEmail()
+			{
+				Email.send({
+   				 Host : "smtp.elasticemail.com",
+   					 Username : "guptsamiksha2112@gmail.com",
+   						 Password : "C73BC0198432F9F9849125E0C2000F91E753",
+   						 To : 'guptasamiksha2112@gmail.com',
+   						 From : document.getElementById("email").value,
+    					Subject : "New Content Contact info",
+   						 Body : "Name:"+ document.getElementById("name").value
+						 + "<br> Email :" + document.getElementById("email").value
+						 + "<br> Phone no. :" + document.getElementById("phone").value
+						 + "<br> Message :" + document.getElementById("message").value
+						}).then(
+ 						 message => alert("Message sent sucessfully")
+							);
+			}
+         </script>
 		<script src="assets/js/jquery.js"></script>
         
         <!--modernizr.min.js-->
