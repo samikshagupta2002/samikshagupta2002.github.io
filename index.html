@@ -669,10 +669,9 @@
 			function sendEmail()
 			{
 				Email.send({
-   				 Host : "smtp.elasticemail.com",
-   					 Username : "guptsamiksha2112@gmail.com",
-   						 Password : "C73BC0198432F9F9849125E0C2000F91E753",
-   						 To : 'guptasamiksha2112@gmail.com',
+					secureToken:"ddbd54ec-29f3-4514-8822-fef3295aa769",
+   				 
+   						 To : 'samikshagupta2112@gmail.com',
    						 From : document.getElementById("email").value,
     					Subject : "New Content Contact info",
    						 Body : "Name:"+ document.getElementById("name").value
