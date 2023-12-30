@@ -595,7 +595,7 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form onsubmit="sendEmail();return false;">
+									<form onsubmit="sendEmail()">
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
@@ -669,20 +669,6 @@
 				{
 				console.log("sendEmail");
 				e.preventDefault(); 
-				Email.send({
-   				 Host : "smtp.elasticemail.com",
-   					 Username : "guptasamiksha2112@gmail.com",
-   						 Password : "C73BC0198432F9F9849125E0C2000F91E753",
-   						 To : 'samikshagupta2112@gmail.com',
-   						 From : document.getElementById("email").value,
-    					Subject : "New Content Contact info",
-   						 Body : "Name:"+ document.getElementById("name").value
-						 + "<br> Email :" + document.getElementById("email").value
-						 + "<br> Phone no. :" + document.getElementById("subject").value
-						 + "<br> Message :" + document.getElementById("comment").value
-						}).then(
- 						 message => alert("Message sent sucessfully")
-							);
 			}
          </script>
 		<script src="assets/js/jquery.js"></script>
