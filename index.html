@@ -595,7 +595,7 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form onsubmit="return sendEmail(event)"> 
+									<form onsubmit="return sendEmail(event)" id="contact_form"> 
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
@@ -618,16 +618,15 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<textarea class="form-control" rows="8" id="message" placeholder="Message" ></textarea>
+													<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message" ></textarea>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<input class="contact-btn" type="submit"></input>
-
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<a class="contact-btn" href="" role="button">submit</a>
+													<a class="contact-btn" href="#" role="button">submit</a>
 												</div><!--/.single-single-contact-btn-->
 											</div><!--/.col-->
 										</div><!--/.row-->
@@ -665,26 +664,29 @@
 		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('So7TnwcbJAwbvU5x_');
+        })();
+    </script>
 		<script>
 			function sendEmail(event)
 			{	
 				event.preventDefault();
-				console.log("send email clciked");
-				Email.send({
-   				 Host : "smtp.elasticemail.com",
-   					 Username : "guptsamiksha2112@gmail.com",
-   						 Password : "C73BC0198432F9F9849125E0C2000F91E753",
-   						 To : 'samikshagupta2112@gmail.com',
-   						 From : document.getElementById("email").value,
-    					Subject : "New Content Contact info",
-   						 Body : "Name:"+ document.getElementById("name").value
-						 + "<br> Email :" + document.getElementById("email").value
-						 + "<br> Subject :" + document.getElementById("subject").value
-						 + "<br> Message :" + document.getElementById("message").value
-						}).then(
- 						 message => alert(message)
-							);
+				console.log("send email clciked yoyo");
+				
+				let serviceId='service_xczt3xm';
+				let templateId='template_85o10xs';
+			
+				emailjs.sendForm(serviceId, templateId, '#contact_form')
+                    .then(function() {
+                        alert("Sent successfully");
+                    }, function(error) {
+                        console.log('FAILED...', error);
+					
+                    });
 			}
          </script>
 		<script src="assets/js/jquery.js"></script>
