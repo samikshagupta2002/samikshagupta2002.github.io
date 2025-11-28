@@ -1,569 +1,779 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samiksha Gupta - BIT OSS Student at Carleton University specializing in Optical Systems and Sensors">
+    <meta name="keywords" content="portfolio, optical systems, sensors, carleton university, information technology">
+    <meta name="author" content="Samiksha Gupta">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Modern font loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Samiksha Gupta | Portfolio</title>
 
-        <!--font-family-->
-
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    
+    <!-- Modern icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    
+    <!-- Animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Modern CSS additions -->
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --secondary-color: #d4af37;
+            --accent-color: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+            --bg-light: #ffffff;
+            --bg-section: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
         
-        <!-- title of site -->
-        <title>PORTFOLIO</title>
-
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-		<!--flat icon css-->
-		<link rel="stylesheet" href="assets/css/flaticon.css">
-
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
-
-        <!--owl.carousel.css-->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        * {
+            scroll-behavior: smooth;
+        }
         
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: #ffffff;
+        }
         
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        .modern-card {
+            background: var(--bg-light);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(44, 62, 80, 0.1);
+            border: 1px solid rgba(44, 62, 80, 0.1);
+            transition: all 0.3s ease;
+        }
         
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-        <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        .modern-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(44, 62, 80, 0.15);
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .modern-btn {
+            background: var(--gradient);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+        }
+        
+        .modern-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+            color: white;
+        }
+        
+        .section-heading h2 {
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .section-heading h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
 
-    </head>
-	
-	<body>
-		
-		<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-		
-		<!-- top-area Start -->
-		<header class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .hero-visual .modern-card {
+            transition: all 0.3s ease;
+        }
+        
+        .hero-visual .modern-card:hover {
+            transform: translateY(-3px);
+        }
+    </style>
 
-			        <div class="container">
+</head>
 
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">Samiksha</a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
+<body>
+    <!-- Loading spinner -->
+    <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeOutUp" data-out="fadeInDown">
-			                <li class=" smooth-menu active"></li>
-			                    <li class=" smooth-menu"><a href="#education">education</a></li>
-			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
-			                    <li class="smooth-menu"><a href="#projects">projects</a></li>
-			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
-			                    <!--/.li class="smooth-menu"><a href="#portfolio">portfolio</a></li-->
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
+    <!-- Modern Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand gradient-text fw-bold fs-4" href="#welcome-hero">Samiksha</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: none;">
+                <i class="fas fa-bars" style="color: var(--primary-color);"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" style="color: var(--text-dark); font-weight: 500;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education" style="color: var(--text-dark); font-weight: 500;">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" style="color: var(--text-dark); font-weight: 500;">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" style="color: var(--text-dark); font-weight: 500;">Projects</a>
+                    </li>
 
-		    <div class="clearfix"></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profiles" style="color: var(--text-dark); font-weight: 500;">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" style="color: var(--text-dark); font-weight: 500;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-		</header><!-- /.top-area-->
-		<!-- top-area End -->
-	
-		<!--welcome-hero start -->
-		
-		<section id="welcome-hero" class="welcome-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="header-text">
-							<div class="banner-container">
-								<div>
-							<h2>hi <span>,</span> i am <br> Samiksha <br> Gupta <span>.</span>   </h2>
-							<p>BIT OSS Student at Carleton University</p>
-							<a href="assets/download/RESUME.pdf" download>download resume</a>
-						</div>
-							<img src="assets/images/about/welcome_banner.png" alt="welcome_image">
-						</div>
-						</div><!--/.header-text-->
-					</div><!--/.col-->
-				</div><!-- /.row-->
-				
-			</div><!-- /.container-->
+    <!-- Modern Hero Section -->
+    <section id="welcome-hero" class="welcome-hero" style="min-height: 100vh; display: flex; align-items: center; background: #ffffff; position: relative; overflow: hidden;">
+        <!-- Enhanced animated background elements -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1;">
+            <div style="position: absolute; top: 20%; left: 10%; width: 100px; height: 100px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+            <div style="position: absolute; top: 60%; right: 10%; width: 150px; height: 150px; background: rgba(30, 58, 95, 0.1); border-radius: 50%; animation: float 8s ease-in-out infinite reverse;"></div>
+            <div style="position: absolute; top: 40%; left: 70%; width: 80px; height: 80px; background: var(--secondary-color); opacity: 0.2; border-radius: 50%; animation: float 10s ease-in-out infinite;"></div>
+            <div style="position: absolute; top: 80%; left: 20%; width: 60px; height: 60px; background: var(--primary-color); opacity: 0.2; border-radius: 50%; animation: float 7s ease-in-out infinite reverse;"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="hero-content animate__animated animate__fadeInUp">
+                        <h1 class="display-3 fw-bold mb-4">
+                            <span style="color: var(--primary-color);">Samiksha</span><br>
+                            <span class="gradient-text">Gupta</span>
+                        </h1>
+                        <p class="lead mb-5" style="color: var(--text-dark); max-width: 600px; margin: 0 auto;">Information Technology Professional<br>Specializing in Optical Systems & Sensor Technologies</p>
+                        
+                        <div class="d-flex gap-3 flex-wrap justify-content-center mb-5">
+                            <a href="assets/download/SamikshaGupta_Resume.pdf" download class="modern-btn">
+                                <i class="fas fa-download me-2"></i>Download Resume
+                            </a>
+                            <a href="#contact" class="btn rounded-pill px-4 py-2" style="border: 2px solid var(--primary-color); color: var(--primary-color); background: transparent;">
+                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                            </a>
+                        </div>
+                        
+                        <!-- Professional stats cards -->
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="modern-card p-3 text-center">
+                                    <i class="fas fa-lightbulb fa-2x mb-2" style="color: var(--secondary-color);"></i>
+                                    <h4 class="fw-bold mb-1" style="color: var(--primary-color);">6+</h4>
+                                    <p class="small mb-0 text-muted">Projects</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="modern-card p-3 text-center">
+                                    <i class="fas fa-code fa-2x mb-2" style="color: var(--primary-color);"></i>
+                                    <h4 class="fw-bold mb-1" style="color: var(--primary-color);">7+</h4>
+                                    <p class="small mb-0 text-muted">Languages</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="modern-card p-3 text-center">
+                                    <i class="fas fa-award fa-2x mb-2" style="color: var(--primary-color);"></i>
+                                    <h4 class="fw-bold mb-1" style="color: var(--primary-color);">3+</h4>
+                                    <p class="small mb-0 text-muted">IEEE Events</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="modern-card p-3 text-center">
+                                    <i class="fas fa-university fa-2x mb-2" style="color: var(--secondary-color);"></i>
+                                    <h4 class="fw-bold mb-1" style="color: var(--primary-color);">OSS</h4>
+                                    <p class="small mb-0 text-muted">Specialization</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); color: var(--primary-color); animation: bounce 2s infinite;">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+    <!-- Modern About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">About Me</h2>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <div class="modern-card p-5 text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-user-graduate fa-3x" style="color: var(--primary-color);"></i>
+                        </div>
+                        <p class="lead text-muted mb-0">
+                            As an Information Technology professional specializing in <strong class="gradient-text">Optical Systems and Sensors</strong>, 
+                            I am dedicated to advancing innovative solutions in photonics and sensor technologies. Currently pursuing my 
+                            Bachelor's degree at Carleton University, I combine theoretical knowledge with practical application to develop 
+                            cutting-edge optical solutions. My expertise spans across optoelectronics, fiber optics, and sensor integration, 
+                            with a focus on bridging the gap between academic research and industry applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!--about start -->
-		<section id="about" class="about">
-			<div class="section-heading text-center">
-				<h2>about me</h2>
-			</div>
-			<div class="container">
-				<div class="about-content">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="single-about-txt">
-								<h3>
-                                                  I'm a tech enthusiast on a mission to bring innovation to life through the lens of Optical Systems and Sensors. Currently immersed in the world of Information Technology at Carleton University, I'm not just a student; I'm a curious mind with a passion for pushing the boundaries of what's possible. My academic voyage is a dynamic intersection of knowledge, creativity, and a relentless drive to make tech not just a study but a vibrant experience.							</div>
-						</div>
-						<div class="col-sm-offset-1 col-sm-5">
-							<div class="single-about-img">
-								<!--img src="assets/images/about/profile_image.png" alt="profile_image"-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/.about-->
-		<!--about end -->
-		
-		<!--education start -->
-		<section id="education" class="education">
-			<div class="section-heading text-center">
-				<h2 style="color:#f5e5ce;border-bottom: 1px solid #f5e5ce;">education</h2>
-			</div>
-			<div class="container">
-				<div class="education-horizontal-timeline">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2022 - 2026</h2>
-									<h3>bachelor <span>of </span> Information Technology in Optical systems and sensors</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Carleton University / Algonquin College
-										</h4>
-										<h5>Ottawa, Canada</h5>
-										<p class="description">
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						
-						
-					
-					</div>
-				</div>
-			</div>
+    <!-- Modern Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">Education</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="modern-card p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-4">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: var(--gradient);">
+                                    <i class="fas fa-graduation-cap text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-1">Bachelor of Information Technology</h4>
+                                <h5 style="color: var(--primary-color);" class="mb-1">Specialization in Optical Systems and Sensors</h5>
+                                <p class="text-muted mb-1">Carleton University / Algonquin College</p>
+                                <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>Ottawa, Ontario</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge rounded-pill" style="background: var(--gradient); font-size: 0.9rem; padding: 8px 16px;">Sep 2022 - Present</span>
+                            </div>
+                        </div>
 
-		</section><!--/.education-->
-		<!--education end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!--skills start -->
-		<section id="skills" class="skills">
-				<div class="skill-content">
-					<div class="section-heading text-center">
-						<h2>skills</h2>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">C/C++</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-													  
-												</div>
-											</div>
-											<h3></h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">JAVA</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<h3></h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">MATLAB</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-												   
-											   </div>
-											</div>
-												
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">labview</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-												
-										</div>
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">ARM Assembly Language</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-													
-												</div>
-											</div>
-											<h3></h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Working with optical components</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-												
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">HTML</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-												   
-											   </div>
-											</div>
-											<h3></h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText"> SQL</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<h3></h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-						</div><!-- /.row -->
-					</div>	<!-- /.container -->		
-				</div><!-- /.skill-content-->
+    <!-- Modern Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">Technical Skills</h2>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-12">
+                    <div class="modern-card p-4">
+                        <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Programming Languages</h4>
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+                            <div class="text-center">
+                                <i class="fab fa-cuttlefish fa-2x mb-2" style="color: var(--primary-color);"></i>
+                                <p class="fw-bold mb-0">C/C++</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-java fa-2x mb-2" style="color: var(--secondary-color);"></i>
+                                <p class="fw-bold mb-0">Java</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-python fa-2x mb-2" style="color: var(--primary-color);"></i>
+                                <p class="fw-bold mb-0">Python</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-html5 fa-2x mb-2" style="color: var(--secondary-color);"></i>
+                                <p class="fw-bold mb-0">HTML</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-css3-alt fa-2x mb-2" style="color: var(--primary-color);"></i>
+                                <p class="fw-bold mb-0">CSS</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-js-square fa-2x mb-2" style="color: var(--secondary-color);"></i>
+                                <p class="fw-bold mb-0">JavaScript</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-database fa-2x mb-2" style="color: var(--primary-color);"></i>
+                                <p class="fw-bold mb-0">SQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
-		</section><!--/.skills-->
-		<!--skills end -->
+        </div>
+    </section>
 
-		<!--projects start -->
-		<section id="projects" class="projects">
-			<div class="section-heading text-center">
-				<h2>Projects</h2>
-			</div>
-			<div class="container">
-				<div class="experience-content">
-						<div class="main-timeline">
-							<ul>
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2 style="color:#261e36ff">2023</h2>
-													<h3></h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 style="color:#261e36ff" class="title">3D Printing of Lens
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															
-														</h4>
-														<h5 style="color:#261e36ff">Ottawa, ON</h5>
-														<p class="description">This project, conducted as part of the Optoelectronics Devices Labs course (OSS2008) at Algonquin College, delves into the realm of 3D printing applications in optics. Under the guidance of Professor Dr. Ilya Golub, the experiment aims to identify suitable 3D printers and materials for lens production. The focus is on designing and 3D printing a plano-convex lens with specific parameters, utilizing transparent filaments and adhering to safety procedures.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+    <!-- Modern Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">Projects</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--gradient);">
+                                    <i class="fas fa-microchip text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-2">Embedded Systems Project</h4>
+                                <span class="badge mb-2" style="background: var(--primary-color); color: white;">April 2025</span>
+                                <p class="text-muted mb-2"><i class="fas fa-tools me-1"></i>Arduino Uno, Embedded C</p>
+                                <ul class="text-muted small">
+                                    <li>Built a real-time night light system using direct register-level programming (no Arduino libraries), with components including a photocell sensor, 16x2 LCD (8-bit mode), 7-segment display via shift register, buzzer, and an external-interrupt-controlled push-button.</li>
+                                    <li>Implemented core embedded features such as ADC for light detection, USART for communication, timers for delay handling, and GPIO for efficient system control and output management.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--gradient);">
+                                    <i class="fab fa-python text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-2">Productivity Tool</h4>
+                                <span class="badge mb-2" style="background: var(--primary-color); color: white;">Dec 2024</span>
+                                <p class="text-muted mb-2"><i class="fas fa-tools me-1"></i>Python, Tkinter, SQLite3, GUI, UML/BPMN Diagrams</p>
+                                <ul class="text-muted small">
+                                    <li>Designed and implemented a modular Productivity Tool using Tkinter, Ttk, and SQLite, featuring a timer with Pomodoro functionality, a task calendar, and a planner for efficient task management.</li>
+                                    <li>Created comprehensive UML and BPMN diagrams to model system design, interactions, and workflows, ensuring clarity in architecture and process flow.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--gradient);">
+                                    <i class="fas fa-cube text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-2">Designing a Lens</h4>
+                                <span class="badge mb-2" style="background: var(--primary-color); color: white;">Oct 2023</span>
+                                <p class="text-muted mb-2"><i class="fas fa-tools me-1"></i>Fusion 360, 3D Printing</p>
+                                <ul class="text-muted small">
+                                    <li>Designed and created a 3D model of a lens using Fusion 360, applying advanced CAD skills and knowledge of optics and geometry.</li>
+                                    <li>Printed the lens prototype using 3D printing technology, ensuring high quality and accuracy of the final product.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--gradient);">
+                                    <i class="fas fa-project-diagram text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-2">Designing an Optical Y Coupler</h4>
+                                <span class="badge mb-2" style="background: var(--primary-color); color: white;">Feb 2023</span>
+                                <p class="text-muted mb-2"><i class="fas fa-tools me-1"></i>Fabrication, Sandpaper Polishing</p>
+                                <ul class="text-muted small">
+                                    <li>Fabricated a Y-coupler from optical materials using advanced techniques, such as sandpaper polishing, to improve the optical quality and performance of the device.</li>
+                                    <li>Tested and verified the Y-coupler's functionality in a specific optical setup, ensuring accurate signal splitting, low loss, and high efficiency.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--gradient);">
+                                    <i class="fas fa-code text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-2">Personal Portfolio</h4>
+                                <span class="badge mb-2" style="background: var(--primary-color); color: white;">2024</span>
+                                <p class="text-muted mb-2"><i class="fas fa-tools me-1"></i>HTML5, CSS3, JavaScript ES6, Bootstrap 5, Font Awesome 6, Formspree, Google Fonts</p>
+                                <ul class="text-muted small">
+                                    <li>Built a modern, responsive portfolio website using semantic HTML5, custom CSS3 with CSS variables, and vanilla JavaScript for smooth interactions and animations.</li>
+                                    <li>Implemented Bootstrap 5 grid system, Font Awesome 6 icons, Google Fonts (Inter & Poppins), and integrated Formspree API for functional contact form with error handling and user feedback.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--gradient);">
+                                    <i class="fas fa-network-wired text-white"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h4 class="fw-bold mb-2">Ciena Site-Manager (OSS)</h4>
+                                <span class="badge mb-2" style="background: var(--primary-color); color: white;">Professional Project</span>
+                                <p class="text-muted mb-2"><i class="fas fa-tools me-1"></i>Optical Networks, SONET/SDH, TL1, ROADM</p>
+                                <ul class="text-muted small">
+                                    <li>Proficient in Adaptive Optical Communication Networks utilizing 10Gb/s-200Gb/s Packet-Optical Platforms, WaveServers, OTN, flexible WaveLogic Photonics, ROADM, SONET/SDH, and programmable network technologies.</li>
+                                    <li>Extensive hands-on experience in Optophotonics Lab, specializing in OAMP, facility/equipment management, synchronization, bandwidth management, and performance monitoring for optimized network functionality.</li>
+                                    <li>Hands-on experience with network configuration, data communication, security management, and backup/restoration using Transaction Language One (TL1).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-offset-1 col-md-5 experience-time-responsive">
-												<div class="experience-time">
-													<h2 style="color:#261e36ff">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2023
-													</h2>
-													<h3></h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-5">
-												<div class="timeline">
-													<div class="timeline-content text-right">
-														<h4 style="color:#261e36ff" class="title">
-															Manufacturing a Y-coupler
-														</h4>
-														<h5 style="color:#261e36ff">Ottawa, ON</h5>
-														<p class="description">
-															In the Optics/Optical Fibers I course at Algonquin College, a hands-on project was undertaken under the guidance of Dr. Wahab Almuhtadi, focusing on the design, manufacturing, and testing of a 50/50 Y-coupler. The project involved the execution of precise steps, including the cutting of fiber optic cables, the application of heat shrink tubing, the incorporation of metal tubes with epoxy, and the execution of thorough polishing. Meticulous testing, utilizing a laser source and microscope, was carried out to verify the Y-coupler's performance and gain practical insights into optical principles. This project, serving as both a self-sufficient product and a testing tool, significantly deepened the understanding of optics and equipped participants with essential skills for future endeavors in optical engineering.													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5 experience-time-main">
-												<div class="experience-time">
-													<h2 style="color:#261e36ff">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2023
-													</h2>
-													<h3></h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
-							</ul>
-						</div><!--.main-timeline-->
-					</div><!--.experience-content-->
-			</div>
-		</section><!--/.experience-->
-		<!--experience end -->
+    <!-- Leadership Section -->
+    <section id="leadership" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">Leadership & Extracurricular</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="modern-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; background: var(--gradient);">
+                                <i class="fas fa-robot text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold text-center mb-2">Volunteer Coordinator</h5>
+                        <p class="text-center text-muted mb-2">IEEE Ottawa Robotics Competition</p>
+                        <p class="text-center mb-3"><span class="badge" style="background: var(--primary-color); color: white;">May 2025</span></p>
+                        <p class="text-muted small text-center">
+                            Distributed name tags and assisted with check-in for volunteers. Coordinated shift assignments for volunteers to ensure smooth event coverage.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="modern-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; background: var(--gradient);">
+                                <i class="fas fa-users text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold text-center mb-2">Volunteer</h5>
+                        <p class="text-center text-muted mb-2">SPAC, IEEE Student Professional Awareness Conference</p>
+                        <p class="text-center mb-3"><span class="badge" style="background: var(--primary-color); color: white;">Nov 2024</span></p>
+                        <p class="text-muted small text-center">
+                            Volunteered as a SPAC Reception Volunteer, managing attendee check-ins, distributing event materials, and providing on-site assistance at a professional networking event.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="modern-card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; background: var(--gradient);">
+                                <i class="fas fa-award text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold text-center mb-2">Volunteer</h5>
+                        <p class="text-center text-muted mb-2">GALA, IEEE</p>
+                        <p class="text-center mb-3"><span class="badge" style="background: var(--primary-color); color: white;">Apr 2023</span></p>
+                        <p class="text-muted small text-center">
+                            Participated as a volunteer at the Engineering Institute of Canada (EIC) and IEEE Gala event, helped organize awards, distribute pamphlets, and ensured orderly seating with name cards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!--profiles start -->
-		<section id="profiles" class="profiles">
-			<div class="profiles-details">
-				<div class="section-heading text-center">
-					<h2>profiles</h2>
-				</div>
-				<div class="container">
-					<div class="profiles-content">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-github-logo"></i></a>
-										<div class="profile-icon-name">github</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://github.com/samikshagupta2002"><i class="flaticon-github-logo"></i></a>
-											<div class="profile-icon-name">github</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-							<div class="col-sm-13">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="fa fa-linkedin-square"></i></a>
+    <!-- Modern Profiles Section -->
+    <section id="profiles" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">Connect</h2>
+            </div>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="modern-card p-4 text-center h-100">
+                        <a href="https://github.com/samikshagupta2002" target="_blank" class="text-decoration-none">
+                            <i class="fab fa-github fa-3x mb-3" style="color: var(--text-dark);"></i>
+                            <h5 class="fw-bold text-dark">GitHub</h5>
+                            <p class="text-muted">Technical projects and code repositories</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="modern-card p-4 text-center h-100">
+                        <a href="https://www.linkedin.com/in/samiksha-gupta-830352167/" target="_blank" class="text-decoration-none">
+                            <i class="fab fa-linkedin fa-3x mb-3" style="color: #0077b5;"></i>
+                            <h5 class="fw-bold text-dark">LinkedIn</h5>
+                            <p class="text-muted">Professional network and career highlights</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-										<div class="profile-icon-name">linkedin</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://www.linkedin.com/in/samiksha-gupta-830352167/"><i class="fa fa-linkedin-square"></i></a>
-											<div class="profile-icon-name">linkedin</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+    <!-- Modern Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-heading text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark">Contact</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="modern-card p-5">
+                        <div id="contact-status" class="alert" style="display: none;"></div>
+                        <form onsubmit="return sendEmail(event)" id="contact_form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                                        <label for="name">Name *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                        <label for="email">Email *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 120px;" required></textarea>
+                                        <label for="message">Message *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="modern-btn" id="submit-btn">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-4 text-center">
+                            <p class="text-muted mb-2">Or reach out directly:</p>
+                            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                                <a href="mailto:guptasamiksha2112@gmail.com" class="text-decoration-none">
+                                    <i class="fas fa-envelope me-2" style="color: var(--primary-color);"></i>
+                                    <span style="color: var(--text-dark);">guptasamiksha2112@gmail.com</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/samiksha-gupta-830352167/" target="_blank" class="text-decoration-none">
+                                    <i class="fab fa-linkedin me-2" style="color: #0077b5;"></i>
+                                    <span style="color: var(--text-dark);">LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		</section>
-		
-		<!--/.profiles-->
-		<!--profiles end -->
+    <!-- Modern Footer -->
+    <footer class="py-4" style="background: var(--primary-color);">
+        <div class="container">
+            <div class="text-center">
+                <p class="text-light mb-0">
+                    &copy; 2024 Samiksha Gupta. All Rights Reserved.
+                </p>
+            </div>
+            
+            <!-- Scroll to top button -->
+            <div id="scroll-Top" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+                <button class="btn rounded-circle" style="background: var(--gradient); width: 50px; height: 50px; border: none; box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <i class="fas fa-chevron-up text-white"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
 
-		<!--contact start -->
-		<section id="contact" class="contact">
-			<div class="section-heading text-center">
-				<h2 style="color:#f5e5ce;border-bottom: 1px solid #f5e5ce;">contact me</h2>
-			</div>
-			<div class="container">
-				<div class="contact-content">
-					<div class="row">
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-form">
-									<form onsubmit="return sendEmail(event)" id="contact_form"> 
-										<div class="row">
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message" ></textarea>
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-				
-												    <input class="single-contact-btn" type="Submit"></input>
-
-
-											</div><!--/.col-->
-										</div><!--/.row-->
-									</form><!--/form-->
-								</div><!--/.contact-form-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-						
-					</div><!--/.row-->
-				</div><!--/.contact-content-->
-			</div><!--/.container-->
-
-		</section><!--/.contact-->
-		<!--contact end -->
-		
-		<!--footer-copyright start-->
-		<footer id="footer-copyright" class="footer-copyright">
-			<div class="container">
-				<div class="hm-footer-copyright text-center">
-					<p>
-						&copy; COPYRIGHTS SAMIKSHA GUPTA. ALL RIGHTS RESERVED. <a href="https://www.themesine.com/"></a>
-					</p><!--/p-->
-				</div><!--/.text-center-->
-			</div><!--/.container-->
-
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" ></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.footer-copyright-->
-		<!--footer-copyright end-->
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            // https://dashboard.emailjs.com/admin/account
             emailjs.init('So7TnwcbJAwbvU5x_');
         })();
     </script>
-		<script>
-			function sendEmail(event)
-			{	
-				event.preventDefault();
-				console.log("send email clciked yoyo");
-				
-				let serviceId='service_xczt3xm';
-				let templateId='template_85o10xs';
-			
-				emailjs.sendForm(serviceId, templateId, '#contact_form')
-                    .then(function() {
-                        alert("Sent successfully");
-			    document.getElementById("contact_form").reset();
-                    }, function(error) {
-                        console.log('FAILED...', error);
-			    document.getElementById("contact_form").reset();
-					
+    
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const statusDiv = document.getElementById('contact-status');
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+            statusDiv.style.display = 'none';
+            
+            // Use Formspree as backup if EmailJS fails
+            const formData = new FormData(document.getElementById('contact_form'));
+            
+            fetch('https://formspree.io/f/xpwzgqpv', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusDiv.className = 'alert alert-success';
+                    statusDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i>Message sent successfully! I\'ll get back to you soon.';
+                    statusDiv.style.display = 'block';
+                    document.getElementById('contact_form').reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                statusDiv.className = 'alert alert-danger';
+                statusDiv.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i>Failed to send message. Please try emailing directly at guptasamiksha2112@gmail.com';
+                statusDiv.style.display = 'block';
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+                submitBtn.disabled = false;
+            });
+        }
+    </script>
+
+    <!-- Modern JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Custom animations and interactions -->
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            document.getElementById('loading').style.display = 'none';
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
-			}
-         </script>
-		<script src="assets/js/jquery.js"></script>
+                }
+            });
+        });
         
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-		
-		<!-- jquery.sticky.js -->
-		<script src="assets/js/jquery.sticky.js"></script>
-		
-		<!-- for progress bar start-->
-
-		<!-- progressbar js -->
-		<script src="assets/js/progressbar.js"></script>
-
-		<!-- appear js -->
-		<script src="assets/js/jquery.appear.js"></script>
-
-		<!-- for progress bar end -->
-
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
-
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
         
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.getElementById('scroll-Top');
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+    </script>
+    
+    <!-- Keep existing custom scripts -->
+    <script src="assets/js/custom.js"></script>
         
-    </body>
+</body>
 	
 </html>
