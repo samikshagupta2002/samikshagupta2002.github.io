@@ -87,14 +87,13 @@
             font-weight: 500;
             text-decoration: none;
             display: inline-block;
-            transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+            transition: opacity 0.3s ease;
         }
         
         .modern-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
             color: white;
+            opacity: 0.8;
         }
         
         .section-heading h2 {
@@ -201,10 +200,10 @@
                         <p class="lead mb-5" style="color: var(--text-dark); max-width: 600px; margin: 0 auto;">Information Technology Professional<br>Specializing in Optical Systems & Sensor Technologies</p>
                         
                         <div class="d-flex gap-3 flex-wrap justify-content-center mb-5">
-                            <a href="assets/download/SamikshaGupta_Resume.pdf" download class="modern-btn">
+                            <a href="assets/download/SamikshaGupta_Resume.pdf" download class="btn rounded-pill px-4 py-2" style="background: var(--gradient); color: white; border: none; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
                                 <i class="fas fa-download me-2"></i>Download Resume
                             </a>
-                            <a href="#contact" class="btn rounded-pill px-4 py-2" style="border: 2px solid var(--primary-color); color: var(--primary-color); background: transparent;">
+                            <a href="#contact" class="btn rounded-pill px-4 py-2" style="border: 2px solid var(--primary-color); color: var(--primary-color); background: transparent; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
                                 <i class="fas fa-envelope me-2"></i>Get In Touch
                             </a>
                         </div>
